@@ -1,0 +1,36 @@
+<html>
+		<head></head>
+
+		<script> 
+		var mouseOnTop = false;
+		var mouseAway = false;
+
+			function over(){
+				mouseOnTop = true;
+			} 
+
+			function away(){
+				mouseAway = true;
+			} 
+
+			function shine(){
+				if(over && away)
+					document.getElementById("myP").style.cursor = "pointer";
+
+			}
+		</script>
+
+		<body>
+
+				<button id = "MyP" onmouseover="over()" 
+				onmouseout="away()"  > button
+				 </button>
+				
+				<input type = "text"/> 
+				<script>shine();</script>
+		</body>
+		
+
+		
+
+</html>	
