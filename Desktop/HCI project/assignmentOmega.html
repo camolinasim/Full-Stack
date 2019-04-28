@@ -1,0 +1,27 @@
+
+<p> Move mouse over the button, then away. Click it and see what happens. <p>
+<script type="text/javascript">
+	var in_and_out = false;
+	var mouseOverButton = false;
+	var mouseAwayButton = false;
+
+	function over(){
+			mouseOverButton = true;
+	}
+
+	function away(){
+		mouseAwayButton=true;
+		 if(mouseAwayButton && mouseOverButton)
+			in_and_out = true;
+	}
+
+	function check(){
+		if(in_and_out)
+			document.body.style.cursor = 'help';
+		
+		
+	}
+
+</script>
+
+<input type="button" onmouseover="over()" onmouseout="away()" onclick="check()" value="Change Cursor" />
